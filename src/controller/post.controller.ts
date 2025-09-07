@@ -1,5 +1,8 @@
 // const API_BASE = import.meta.env.VITE_API_URL;
 
+// Makes a fetch request to the db,
+// checks if the data arrived in order and returns it,
+// and if no data arrived, returns an empty array
 export async function getPostHandler() {
   try {
     const response = await fetch(`/DB/postsDB.json`,);

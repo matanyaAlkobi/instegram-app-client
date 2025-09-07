@@ -2,8 +2,8 @@ import GetImage from "./GetImage.tsx";
 import "../styles/post.css";
 import { type Post } from "../interfaces/Post.ts";
 
+//Handles post creation and returns them
 export default function PostCreator({ post }: { post: Post }) {
-  console.log("post: ",post)
   return (
     <>
     
