@@ -1,8 +1,8 @@
-// const API_BASE = import.meta.env.VITE_API_URL;
+const DB_BASE = import.meta.env.VITE_DB_URL;
 
 export async function getPostHandler() {
   try {
-    const response = await fetch(`/DB/postsDB.json`,);
+    const response = await fetch(`${DB_BASE}`,);
     
     if (!response.ok) {
       throw new Error(`Failed to fetch posts: ${response.status}`);
