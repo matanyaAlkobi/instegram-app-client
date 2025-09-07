@@ -1,16 +1,20 @@
 import GetImage from "./GetImage.tsx";
-import  "../styles/post.css"
-export default function PostCreator() {
+import "../styles/post.css";
+import { type Post } from "../interfaces/Post.ts";
+
+export default function PostCreator({ post }: { post: Post }) {
+  console.log("post: ",post)
   return (
     <>
-      <div className="post">
-        <h3>matan</h3>
-        <GetImage />
-        <div  className="time-and-like">
-          <p className="like">♡ 2</p>
-          <p className="time">17:00</p>
+    
+      <div className="post" key={post.id}>
+        <h3>{post.username}</h3>
+        <GetImage imgSrc={post.image} />
+        <div className="time-and-like">
+          <p className="like">♡ {post.likes}</p>
+          <p className="time">{post.timeAndHour}</p>
         </div>
-        <p>a nice car</p>
+        <p>{post.imageDescription}</p>
       </div>
     </>
   );

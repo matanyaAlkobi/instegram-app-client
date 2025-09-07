@@ -1,13 +1,13 @@
 
 
 import './App.css'
-import PostCreator from './components/PostCreator'
+import PostsPage from './pages/PostsPage'
 
 function App() {
 
   return (
     <>
-    <PostCreator/>
+    <PostsPage/>
     </>
   )
 }

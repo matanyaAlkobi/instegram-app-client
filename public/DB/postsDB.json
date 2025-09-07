@@ -1,0 +1,25 @@
+ [
+    {
+      "id":1,
+      "username": "mosh",
+      "image": "/images/car1.jpg",
+      "likes": "2",
+      "timeAndHour": "5:00",
+      "imageDescription": "car1"
+    },
+    {
+      "username": "mosh",
+      "image": "/images/car2.jpg",
+      "likes": "2",
+      "timeAndHour": "5:00",
+      "imageDescription": "car1"
+    },
+    {
+      "id":2,
+      "username": "bugati",
+      "image": "/images/car3.jpg",
+      "likes": "10",
+      "timeAndHour": "9:00",
+      "imageDescription": "car3"
+    }
+  ]

@@ -1,8 +1,8 @@
-import img from "../assets/images/car1.jpg"
-export default function GetImage(){
+export default function GetImage({imgSrc}:{imgSrc: string}){
+    
     return(
         <>
-        <img src={img} alt="car image" />
+        <img src={imgSrc} alt="car image" />
 </>
     )
 }
