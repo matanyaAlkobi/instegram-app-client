@@ -1,5 +1,5 @@
 import GetImage from "./GetImage.tsx";
-import  "../styles/post.css"
+
 export default function PostCreator() {
   return (
     <>
