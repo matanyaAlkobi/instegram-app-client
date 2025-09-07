@@ -3,6 +3,8 @@ import { getPostHandler } from "../controller/post.controller";
 import PostCreator from "../components/PostCreator";
 import { type Post } from "../interfaces/Post";
 
+// Calls the function getPostHandler that fetches the posts,
+// and creates posts in a loop by calling the function PostCreator
 export default  function PostsPage(){
       const [posts, setPosts] = useState<Post[]>([]);
       useEffect(() => {
