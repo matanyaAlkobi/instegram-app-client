@@ -24,5 +24,8 @@ to discuss what you would like to change.
 Please make sure to update tests as appropriate.
 
 ## env
+You need to put the env file in the main folder.
+
+## env variables
 VITE_DB_URL = /DB/postsDB.json
 
