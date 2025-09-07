@@ -6,7 +6,6 @@ import { type Post } from "../interfaces/Post.ts";
 export default function PostCreator({ post }: { post: Post }) {
   return (
     <>
-    
       <div className="post" key={post.id}>
         <h3>{post.username}</h3>
         <GetImage imgSrc={post.image} />

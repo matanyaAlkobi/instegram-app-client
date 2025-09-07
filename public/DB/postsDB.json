@@ -8,6 +8,7 @@
       "imageDescription": "car1"
     },
     {
+      "id":2,
       "username": "mosh",
       "image": "/images/car2.jpg",
       "likes": "2",
@@ -15,7 +16,7 @@
       "imageDescription": "car1"
     },
     {
-      "id":2,
+      "id":3,
       "username": "bugati",
       "image": "/images/car3.jpg",
       "likes": "10",
