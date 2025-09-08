@@ -13,7 +13,7 @@ export default function PostCreator({ post }: { post: Post }) {
           <p className="like">♡ {post.likes}</p>
           <p className="time">{post.timeAndHour}</p>
         </div>
-        <p>{post.imageDescription}</p>
+        <p className="imageDescription">{post.imageDescription}</p>
       </div>
     </>
   );
