@@ -1,14 +1,16 @@
 import GetImage from "../GetImage";
 import GetAppSlogen from "./appSlogan";
-import {  Outlet, useNavigate } from "react-router";
-
+import { Outlet, useNavigate } from "react-router";
+import "../../styles/layout.css";
 export default function Layout() {
   const navigate = useNavigate();
   return (
     <>
       <header>
         <GetAppSlogen />
-        <GetImage imgSrc="/images/app-logo.jpeg" alt="app-logo-image" />
+        <div className="app-logo">
+          <GetImage imgSrc="/images/app-logo.jpeg" alt="app-logo-image" />
+        </div>
       </header>
       <div>
         <Outlet />

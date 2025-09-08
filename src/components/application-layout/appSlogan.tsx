@@ -1,7 +1,7 @@
 export default function GetAppSlogen() {
   return (
     <>
-      <h1>Scroll and get the news first</h1>
+      <h2 className="app-slogen">Scroll and get the news first</h2>
     </>
   );
 }
