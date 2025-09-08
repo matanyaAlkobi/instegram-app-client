@@ -13,6 +13,7 @@ export default function Layout() {
         </div>
       </header>
       <div>
+        <button onClick={()=> navigate("/posts")}></button>
         <Outlet />
       </div>
     </>
