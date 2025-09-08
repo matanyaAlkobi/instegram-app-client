@@ -1,15 +1,18 @@
-
-
-import './App.css'
-import PostsPage from './pages/PostsPage'
+import { Route, Routes } from "react-router";
+import "./App.css";
+import Layout from "./components/application-layout/appLayout";
+import PostsPage from "./pages/PostsPage";
 
 function App() {
-
   return (
-    <>
-    <PostsPage/>
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Layout />}>
+           <Route path="/"></Route>
+          <Route path="/posts" element={<PostsPage />} />
+        </Route>
+      </Routes>
+
+  );
 }
 
-export default App
+export default App;
