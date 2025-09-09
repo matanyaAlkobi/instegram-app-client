@@ -6,7 +6,9 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   color: black;
   background-color: whitesmoke;
-  width: 18rem;
+  width: 21rem;
+  justify-self: center;
+  margin-bottom: 1rem;
 }
 
 .post h3{
@@ -14,6 +16,13 @@
     padding-left: 1rem;
 }
 
+.post img{
+        justify-self: center;
+        justify-items: center;
+        background-color: black;
+        
+
+}
 .time-and-like{
     display: flex;
     flex-direction: row;
