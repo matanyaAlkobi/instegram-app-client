@@ -1,9 +1,8 @@
 import GetImage from "../GetImage";
 import GetAppSlogen from "./appSlogan";
-import { Outlet, useNavigate } from "react-router";
+import { Link, Outlet } from "react-router";
 import "../../styles/layout.css";
 export default function Layout() {
-  const navigate = useNavigate();
   return (
     <>
       <header>
@@ -12,8 +11,11 @@ export default function Layout() {
           <GetImage imgSrc="/images/app-logo.jpeg" alt="app-logo-image" />
         </div>
       </header>
+      <div className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="postSearch">post search</Link>
+      </div>
       <div>
-        <button onClick={()=> navigate("/posts")}></button>
         <Outlet />
       </div>
     </>
