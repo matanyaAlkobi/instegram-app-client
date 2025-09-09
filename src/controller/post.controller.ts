@@ -21,6 +21,9 @@ export async function getPostHandler() {
   }
 }
 
+// The function receives an id
+// sends a fetch request with the received id
+// returns the post
 export async function fetchPostById(idToFetch: string | undefined) {
   try {
     const response = await fetch(`${API_BASE}/post/${idToFetch}`);

@@ -2,6 +2,8 @@ import GetImage from "../GetImage";
 import GetAppSlogen from "./appSlogan";
 import { Link, Outlet } from "react-router";
 import "../../styles/layout.css";
+
+// A function that manages the layout of the application's pages
 export default function Layout() {
   return (
     <>

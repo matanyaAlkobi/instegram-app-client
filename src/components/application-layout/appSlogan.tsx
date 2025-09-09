@@ -1,3 +1,4 @@
+// A function that returns the app's slogan
 export default function GetAppSlogen() {
   return (
     <>

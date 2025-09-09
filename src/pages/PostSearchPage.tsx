@@ -4,11 +4,14 @@ import PostCreator from "../components/PostCreator";
 import type { Post } from "../interfaces/Post";
 import "../styles/postSearchPage.css";
 
+// A function that presents the client with an input box for entering an id and a submit button.
 export default function GetPostByID() {
+// Saving variables in useref and usestate for use on the page
   const idToSearcRef = useRef<HTMLInputElement>(null);
   const [theRequestedPost, setTheRequestedPost] = useState<Post>();
   const [isTryingToSearch, setIsTryingToSearch] = useState<boolean>(false);
 
+// callback that sends the id received from the client to the function that does the fetch
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
