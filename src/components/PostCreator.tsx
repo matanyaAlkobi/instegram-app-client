@@ -1,14 +1,16 @@
 import GetImage from "./GetImage.tsx";
 import "../styles/post.css";
 import { type Post } from "../interfaces/Post.ts";
+import { useNavigate } from "react-router";
 
 //Handles post creation and returns them
 export default function PostCreator({ post }: { post: Post }) {
+  const navigate =  useNavigate()
   return (
     <>
-      <div className="post" key={post.id}>
+      <div className="post" key={post.id} onClick={()=> navigate(`/posts/${post.id}`)}>
         <h3>{post.username}</h3>
-        <GetImage imgSrc={post.image} alt={post.imagemame}/>
+        <GetImage imgSrc={post.image} alt={post.imagemame} />
         <div className="time-and-like">
           <p className="like">♡ {post.likes}</p>
           <p className="time">{post.timeAndHour}</p>
