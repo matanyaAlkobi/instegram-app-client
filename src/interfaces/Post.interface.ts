@@ -7,3 +7,10 @@ export interface Post {
   timeAndHour: string;
   imageDescription: string;
 }
+
+
+export interface newPost {
+  username: string | undefined;
+  image: string |undefined;
+  imageDescription: string |undefined;
+}

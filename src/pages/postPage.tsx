@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { fetchPostById } from "../controller/post.controller";
 import PostCreator from "../components/PostCreator";
-import type { Post } from "../interfaces/Post";
+import type { Post } from "../interfaces/Post.interface.ts";
 
 // The function retrieves the id using useParams
 // calls the function that fetches the server

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { fetchPostById } from "../controller/post.controller";
 import PostCreator from "../components/PostCreator";
-import type { Post } from "../interfaces/Post";
+import type { Post } from "../interfaces/Post.interface.ts";
 import "../styles/postSearchPage.css";
 
 // A function that presents the client with an input box for entering an id and a submit button.
@@ -18,14 +18,14 @@ export default function GetPostByID() {
       setTheRequestedPost(await fetchPostById(idToSearcRef.current?.value));
       setIsTryingToSearch(true);
     } catch (err: any) {
-      console.error("Error finding the riddle ", err);
+      console.error("Error finding the post ", err);
     }
   };
   return (
     <>
       <div className="post-search-page">
         <h3>Enter a post ID and we'll find it for you.</h3>
-        <form action="" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input
             ref={idToSearcRef}
             type="text"

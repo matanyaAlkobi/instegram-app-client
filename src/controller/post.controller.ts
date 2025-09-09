@@ -1,3 +1,5 @@
+import type { newPost } from "../interfaces/Post.interface";
+
 const API_BASE = import.meta.env.VITE_API_URL;
 
 // Makes a fetch request to the db,
@@ -35,8 +37,30 @@ export async function fetchPostById(idToFetch: string | undefined) {
     }
     const theRequestedPost = await response.json();
     return theRequestedPost;
-  } catch (err: any) {
-    console.error(`Error fetching post with an id: ${idToFetch}:`, err.message);
+  } catch (err: unknown) {
+    console.error(`Error fetching post with an id: ${idToFetch}:`, (err as Error).message);
     return false;
+  }
+}
+
+// Handling sending fetch to the server with the new post
+export async function createPostHandler(postToUpload: newPost) {
+  console.log(`sending... ${JSON.stringify(postToUpload)}`);
+  try {
+    const createResponse = await fetch(`${API_BASE}/post/create`, {
+      method: "POST",
+      body: JSON.stringify(postToUpload),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (!createResponse.ok) {
+      throw new Error(`Failed to create post : ${createResponse.status}`);
+    }
+    const data = await createResponse.json();
+    return data;
+  } catch (err: unknown) {
+    console.error(`Error creating post :`, (err as Error).message);
+    return {};
   }
 }

@@ -1,6 +1,6 @@
 import GetImage from "./GetImage.tsx";
 import "../styles/post.css";
-import { type Post } from "../interfaces/Post.ts";
+import { type Post } from "../interfaces/Post.interface.ts";
 import { useNavigate } from "react-router";
 
 //Handles post creation and returns them
