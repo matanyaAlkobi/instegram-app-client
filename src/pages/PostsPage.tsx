@@ -19,11 +19,12 @@ export default  function PostsPage(){
     return(
     <>
     <div className="posts-page">
-        {posts.map((post)=>
+      
+        {posts.length > 0? posts.map((post)=>
         (
             <PostCreator post={post}/>
         )
-        )}
+        ):<h3>Error!!!, we were unable to connect to the server. Try again.</h3>}
     </div>
     </>)
 }
