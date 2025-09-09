@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { fetchPostById } from "../controller/post.controller";
 import PostCreator from "../components/PostCreator";
 import type { Post } from "../interfaces/Post";
+import "../styles/postSearchPage.css";
 
 export default function GetPostByID() {
   const idToSearcRef = useRef<HTMLInputElement>(null);
@@ -19,7 +20,7 @@ export default function GetPostByID() {
   };
   return (
     <>
-      <div>
+      <div className="post-search-page">
         <h3>Enter a post ID and we'll find it for you.</h3>
         <form action="" onSubmit={handleSubmit}>
           <input
@@ -29,7 +30,6 @@ export default function GetPostByID() {
             placeholder="Please enter a post ID."
             required
           />
-
           <button type="submit">search</button>
         </form>
         {isTryingToSearch && (
@@ -37,7 +37,7 @@ export default function GetPostByID() {
             {theRequestedPost ? (
               <PostCreator post={theRequestedPost} />
             ) : (
-              <p>We were unable to find the requested post.</p>
+              <p className="Error">We were unable to find the requested post.</p>
             )}
           </div>
         )}

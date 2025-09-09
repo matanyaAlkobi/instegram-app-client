@@ -1,0 +1,55 @@
+.post-search-page {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.post-search-page h3 {
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.post-search-page div {
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.post-search-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.idSearcher-input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
+  background-color: rgb(192, 213, 224);
+}
+.post-search-page button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #6366f1;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.post-search-page button:hover {
+  background: #7e22ce;
+}
+
+.Error {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
