@@ -22,6 +22,7 @@ export default function Layout() {
           <Link className="navbar-link" to="postSearch">
             post search
           </Link>
+          <Link className="navbar-link" to="createPost" >upload a post</Link>
         </div>
         <div className="outlet">
           <Outlet />
