@@ -8,7 +8,12 @@ const API_BASE = import.meta.env.VITE_API_URL;
 export async function getPostHandler() {
   try {
     console.log("trynig to  fetch ");
-    const response = await fetch(`${API_BASE}/post`);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    const response = await fetch(`${API_BASE}/post`, {
+      method: "GET",
+      credentials: "include",
+    });
 
     if (!response.ok) {
       throw new Error(`Failed to fetch posts: ${response.status}`);
@@ -28,7 +33,12 @@ export async function getPostHandler() {
 // returns the post
 export async function fetchPostById(idToFetch: string | undefined) {
   try {
-    const response = await fetch(`${API_BASE}/post/${idToFetch}`);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    const response = await fetch(`${API_BASE}/post/${idToFetch}`, {
+      method: "GET",
+      credentials: "include",
+    });
 
     if (!response.ok) {
       throw new Error(
@@ -58,6 +68,7 @@ export async function createPostHandler(postToUpload: newPost) {
       body: JSON.stringify(postToUpload),
       headers: {
         "Content-Type": "application/json",
+        credentials: "include",
       },
     });
     if (!createResponse.ok) {

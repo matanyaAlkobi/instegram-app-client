@@ -16,7 +16,7 @@ export default function Layout() {
 
       <div className="page-structure">
         <div className="navbar">
-          <Link className="navbar-link" to="/">
+          <Link className="navbar-link" to="/home">
             Home
           </Link>
           <Link className="navbar-link" to="postSearch">
