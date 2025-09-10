@@ -27,5 +27,5 @@ Please make sure to update tests as appropriate.
 You need to put the env file in the main folder.
 
 ## env variables
-VITE_DB_URL = /DB/postsDB.json
+VITE_API_URL = http://localhost:4545
 
