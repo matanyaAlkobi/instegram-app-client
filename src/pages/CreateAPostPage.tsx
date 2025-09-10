@@ -1,21 +1,25 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { createPostHandler } from "../controller/post.controller";
-import type { newPost } from "../interfaces/Post.interface";
+import type { newPost, Post } from "../interfaces/Post.interface";
+import PostCreator from "../components/PostCreator";
 export default function CreateAPostPage() {
   const usernameRef = useRef<HTMLInputElement>(null);
   const imageRef = useRef<HTMLInputElement>(null);
   const imageDescriptionRef = useRef<HTMLInputElement>(null);
+  const [newPost, setNewPost] = useState<Post>();
+  const [isTryingToCreate, setIsTryingToCreate] = useState<boolean>(false);
 
+  console.log("newPost", newPost);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const postToUpload:newPost = {
+      const postToUpload: newPost = {
         username: usernameRef.current?.value,
         image: imageRef.current?.value,
         imageDescription: imageDescriptionRef.current?.value,
       };
-      const newPost = await createPostHandler(postToUpload);
-      console.log("newPost",newPost)
+      setNewPost(await createPostHandler(postToUpload));
+      setIsTryingToCreate(true);
     } catch (err) {
       console.error("Error creating the post ", err);
     }
@@ -49,6 +53,15 @@ export default function CreateAPostPage() {
           />
           <button type="submit">upload</button>
         </form>
+        {isTryingToCreate && (
+          <div>
+            {newPost ? (
+              <PostCreator post={newPost} />
+            ) : (
+              <p className="Error">We were unable to create the post.</p>
+            )}
+          </div>
+        )}
       </div>
     </>
   );

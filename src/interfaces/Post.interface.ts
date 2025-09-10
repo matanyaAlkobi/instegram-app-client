@@ -3,7 +3,7 @@ export interface Post {
   username: string;
   imagemame: string;
   image: string;
-  likes: string;
+  likes: number;
   timeAndHour: string;
   imageDescription: string;
 }
