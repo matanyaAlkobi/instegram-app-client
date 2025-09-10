@@ -38,7 +38,10 @@ export async function fetchPostById(idToFetch: string | undefined) {
     const theRequestedPost = await response.json();
     return theRequestedPost;
   } catch (err: unknown) {
-    console.error(`Error fetching post with an id: ${idToFetch}:`, (err as Error).message);
+    console.error(
+      `Error fetching post with an id: ${idToFetch}:`,
+      (err as Error).message
+    );
     return false;
   }
 }
@@ -47,6 +50,8 @@ export async function fetchPostById(idToFetch: string | undefined) {
 export async function createPostHandler(postToUpload: newPost) {
   console.log(`sending... ${JSON.stringify(postToUpload)}`);
   try {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     const createResponse = await fetch(`${API_BASE}/post/create`, {
       method: "POST",
       body: JSON.stringify(postToUpload),
@@ -57,10 +62,10 @@ export async function createPostHandler(postToUpload: newPost) {
     if (!createResponse.ok) {
       throw new Error(`Failed to create post : ${createResponse.status}`);
     }
-    const data = await createResponse.json();
-    return data;
+    const newPost = await createResponse.json();
+    return newPost.message;
   } catch (err: unknown) {
     console.error(`Error creating post :`, (err as Error).message);
-    return {};
+    return false;
   }
 }
