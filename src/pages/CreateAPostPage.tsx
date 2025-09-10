@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { createPostHandler } from "../controller/post.controller";
 import type { newPost, Post } from "../interfaces/Post.interface";
 import PostCreator from "../components/PostCreator";
+import "../styles/createPostPage.css"
 
 // A function that displays the Create a Post page for a customer
 export default function CreateAPostPage() {
@@ -60,7 +61,9 @@ export default function CreateAPostPage() {
           />
           <button type="submit">upload</button>
         </form>
-        {isTryingToCreate && (
+
+      </div>
+              {isTryingToCreate && (
           <div>
             {newPost ? (
               <PostCreator post={newPost} />
@@ -69,7 +72,6 @@ export default function CreateAPostPage() {
             )}
           </div>
         )}
-      </div>
     </>
   );
 }

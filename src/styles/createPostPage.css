@@ -1,4 +1,4 @@
-.post-search-page {
+.create-a-post-page {
   background: #fff;
   padding: 2rem;
   border-radius: 1.5rem;
@@ -7,25 +7,23 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-    justify-self: center;
-
+  justify-content: center;
+  justify-self: center;
+  margin-bottom: 1.2rem;
 }
-.post-search-page h3 {
+
+.create-a-post-page h3 {
   color: #6366f1;
   font-weight: bold;
 }
 
-.post-search-page div {
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-.post-search-page form {
+.create-a-post-page form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.idSearcher-input {
+.create-post-input {
   padding: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -33,7 +31,8 @@
   transition: all 0.3s;
   background-color: rgb(192, 213, 224);
 }
-.post-search-page button {
+
+.create-a-post-page button {
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   border: none;
@@ -44,12 +43,6 @@
   transition: all 0.3s ease;
 }
 
-.post-search-page button:hover {
+.create-a-post-page button:hover {
   background: #7e22ce;
-}
-
-.Error {
-  color: red;
-  font-weight: bold;
-  font-size: 1.5rem;
 }
