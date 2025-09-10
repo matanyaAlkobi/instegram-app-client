@@ -47,6 +47,7 @@ export async function fetchPostById(idToFetch: string | undefined) {
 }
 
 // Handling sending fetch to the server with the new post
+// Returns the new post
 export async function createPostHandler(postToUpload: newPost) {
   console.log(`sending... ${JSON.stringify(postToUpload)}`);
   try {
