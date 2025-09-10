@@ -1,0 +1,65 @@
+.login-Registration-page {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+  justify-self: center;
+  margin-top: 5rem;
+}
+
+
+
+.login-Registration-page div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-Registration-page button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #6366f1;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-Registration-page button:hover {
+  background-color: #4338ca;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-signup-input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+
+
+.login-form button {
+  padding: 0.8rem;
+  background: #a855f7;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.user-information button:hover {
+  background: #7e22ce;
+}
