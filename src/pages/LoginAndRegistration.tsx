@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { loginUser, signupUser } from "../controller/user.controller";
-
+import "../styles/loginPage.css"
 export default function LoginAndRegistration() {
   const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ export default function LoginAndRegistration() {
       
         </div>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="login-form">
           {!isLogin && (
             <input
               ref={emailRef}
@@ -66,7 +66,6 @@ export default function LoginAndRegistration() {
           />
           <button type="submit">submit</button>
         </form>
-        <button onClick={() => navigate("/home")}>home</button>
       </div>
     </>
   );
